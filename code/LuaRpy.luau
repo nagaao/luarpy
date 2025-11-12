@@ -10,7 +10,13 @@ local DEBRIS = game:GetService("Debris")
 local LuaRpy = {}
 LuaRpy.__index = LuaRpy
 
---[[ HELPER FUNCTIONS ]]--
+local VALID_INPUTS = {
+	Enum.KeyCode.Space,
+	Enum.KeyCode.Right,
+	Enum.KeyCode.ButtonX,
+	Enum.UserInputType.Touch,
+	Enum.UserInputType.MouseButton1
+}
 
 -- Returns a Property for tweens for a specific Instance with "part" for the exact property
 local function RETURN_TWEEN_PROPERTY(part: string, obj: Instance): string
@@ -500,10 +506,7 @@ function LuaRpy:waitForInput(): ()
 	local Signal = nil
 	
 	Signal = USER_INPUT_SERVICE.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-			COMPLETED = true
-		end
-		if input.KeyCode == Enum.KeyCode.ButtonX or input.KeyCode == Enum.KeyCode.Right or input.KeyCode == Enum.KeyCode.Space then
+		if table.find(VALID_INPUTS, input.UserInputType) or table.find(VALID_INPUTS, input.KeyCode) then
 			COMPLETED = true
 		end
 	end)
