@@ -95,14 +95,14 @@ User Interface
 --------------
 
 
-Download the "gameInterface.rbxm" file as a template for your interface. Place this in StarterGui and ungroup it. 
+Download the "gameInterface.rbxm" file from the releases as a template for your interface. Place this in StarterGui and ungroup it. 
 
 You may customize this to your liking.
 
 
 Too lazy to follow?
 -------------------
-Download the "defaultTemplate.rbxl" file and modify everything to your needs.
+Download the "defaultTemplate.rbxl" file from the releases and modify everything to your needs.
 
 Contributing
 ============
