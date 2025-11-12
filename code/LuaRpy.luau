@@ -10,6 +10,7 @@ local DEBRIS = game:GetService("Debris")
 local LuaRpy = {}
 LuaRpy.__index = LuaRpy
 
+-- Inputs for continuing with the story
 local VALID_INPUTS = {
 	Enum.KeyCode.Space,
 	Enum.KeyCode.Right,
